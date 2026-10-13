@@ -176,10 +176,10 @@ function header(t) {
   <g transform="translate(100 104)">
     <circle r="7" fill="#FF5F57"/><circle cx="24" r="7" fill="#FEBC2E"/><circle cx="48" r="7" fill="#28C840"/>
   </g>
-  ${glass(W - 340, 84, 236, 40, 20, t, { magnify: 1.3 })}
-  <g transform="translate(${W - 316} 104)">
+  ${glass(W - 396, 84, 296, 40, 20, t, { magnify: 1.3 })}
+  <g transform="translate(${W - 372} 104)">
     <circle r="5" fill="#30D158"><animate attributeName="opacity" values="1;.35;1" dur="2s" repeatCount="indefinite"/></circle>
-    <text x="16" y="5.5" font-size="15" font-weight="500" fill="${t.text}">Open to projects · Disponível</text>
+    <text x="16" y="5.5" font-size="15" font-weight="500" textLength="230" lengthAdjust="spacingAndGlyphs" fill="${t.text}">Open to projects · Disponível</text>
   </g>
   <text x="100" y="212" font-size="68" font-weight="700" letter-spacing="-2" fill="${t.text}">Guilherme Borges</text>
   ${typing(102, 268, ['AI Automation Developer', 'Dev & Automação com IA'], 32, t)}
