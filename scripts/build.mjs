@@ -338,6 +338,12 @@ const PROJECTS = [
     tags: ['React', 'three.js', 'Vite'], metric: 'não oficial · unofficial', link: 'Site',
   },
   {
+    repo: 'borg-business-os', area: 'ia', title: 'BORG Business OS',
+    pt: 'Painel de gestão com 6 agentes de IA e memória longa',
+    en: 'Solo-founder dashboard with 6 AI agents and memory',
+    tags: ['Next.js', 'Supabase', 'Claude'], metric: '6 agentes · 9 tools', link: 'Repo',
+  },
+  {
     repo: 'memoria-ia-obsidian', area: 'ia', title: 'Memória de IA com Obsidian',
     pt: 'Tutorial: memória de longo prazo para o Claude por projeto',
     en: 'Long-term AI memory with Obsidian, MCP and Claude hooks',

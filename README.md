@@ -11,8 +11,8 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=07244117">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=6df68b6e" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=fab910b4">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=044b33a4" width="100%">
 </picture>
 
 <!-- projects:start -->
@@ -22,6 +22,8 @@
 <a href="https://github.com/guiboorges/inn-aroma"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-inn-aroma-dark.svg?v=acd807c5"><img alt="INN AROMA · Concept: Unofficial redesign concept with a three.js diffuser" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-inn-aroma-light.svg?v=b8ec733a" width="49%"></picture></a>
 
 <a href="https://github.com/guiboorges/kit-editar"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-kit-editar-dark.svg?v=9b28eee6"><img alt="Kit EDITAR: Step-by-step kit to edit reels with AI, word-synced" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-kit-editar-light.svg?v=f11dd2d2" width="49%"></picture></a>
+<a href="https://github.com/guiboorges/borg-business-os"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-borg-business-os-dark.svg?v=c21db39b"><img alt="BORG Business OS: Solo-founder dashboard with 6 AI agents and memory" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-borg-business-os-light.svg?v=f2d7bbb1" width="49%"></picture></a>
+
 <a href="https://github.com/guiboorges/memoria-ia-obsidian"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-memoria-ia-obsidian-dark.svg?v=9332fc53"><img alt="Memória de IA com Obsidian: Long-term AI memory with Obsidian, MCP and Claude hooks" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-memoria-ia-obsidian-light.svg?v=d8f954c5" width="49%"></picture></a>
 <!-- projects:end -->
 
