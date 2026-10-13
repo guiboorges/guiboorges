@@ -11,9 +11,16 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=7125268e">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=93bbefcc" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=30e6b5f2">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=a3400ce5" width="100%">
 </picture>
+
+<!-- projects:start -->
+<a href="https://github.com/guiboorges?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/projects-dark.svg?v=fe60a78f"><img alt="Projects · Projetos" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/projects-light.svg?v=09bc1f77" width="100%"></picture></a>
+
+<a href="https://github.com/guiboorges/plataforma-engenharia-ia"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-plataforma-engenharia-ia-dark.svg?v=62651d50"><img alt="Plataforma de Engenharia de IA: Self-study AI Engineering platform with a live demo" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-plataforma-engenharia-ia-light.svg?v=5196b570" width="49%"></picture></a>
+<a href="https://github.com/guiboorges/kit-editar"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-kit-editar-dark.svg?v=9b28eee6"><img alt="Kit EDITAR: Step-by-step kit to edit reels with AI, word-synced" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-kit-editar-light.svg?v=f11dd2d2" width="49%"></picture></a>
+<!-- projects:end -->
 
 <a href="https://www.linkedin.com/in/guilherme-borges-113a2a168/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-dark.svg?v=f17af1f1"><img alt="LinkedIn" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-light.svg?v=96f9d3e7" height="56"></picture></a>
 <a href="https://www.instagram.com/guiboorges_/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-instagram-dark.svg?v=83a5ff6c"><img alt="Instagram" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-instagram-light.svg?v=baf6340f" height="56"></picture></a>

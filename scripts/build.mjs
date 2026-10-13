@@ -310,6 +310,90 @@ function button(t, b) {
 </svg>\n`;
 }
 
+// ---------- projects: one glass card per repo, grouped by area ----------
+// To add a project: append an entry here and run the build (the README section is regenerated).
+const AREAS = {
+  ensino: { icon: 'school', label: 'Ensino · Education' },
+  sites: { icon: 'world-www', label: 'Sites · Web' },
+  motion: { icon: 'movie', label: 'Motion & Vídeo' },
+  ia: { icon: 'sparkles', label: 'IA · AI' },
+};
+const PROJECTS = [
+  {
+    repo: 'plataforma-engenharia-ia', area: 'ensino', title: 'Plataforma de Engenharia de IA',
+    pt: 'Estudo autodidata de IA: aulas, widgets, provas e revisão',
+    en: 'Self-study AI Engineering platform with a live demo',
+    tags: ['React', 'TypeScript', 'Vite'], metric: '30 módulos · 7 fases', link: 'Demo',
+  },
+  {
+    repo: 'kit-editar', area: 'motion', title: 'Kit EDITAR',
+    pt: 'Prompts para editar reels com motion e legenda karaokê',
+    en: 'Step-by-step kit to edit reels with AI, word-synced',
+    tags: ['Claude Code', 'HyperFrames', 'GSAP'], metric: '11 prompts · 7 agentes', link: 'Site',
+  },
+].sort((a, b) => Object.keys(AREAS).indexOf(a.area) - Object.keys(AREAS).indexOf(b.area));
+
+const tablerPaths = (name) => [...readFileSync(join(ROOT, 'scripts/icons', `tabler-${name}.svg`), 'utf8')
+  .matchAll(/<path (?!stroke="none")[^>]*d="([^"]+)"/g)].map((m) => `<path d="${m[1]}"/>`).join('');
+const outlineIcon = (name, x, y, size, color) =>
+  `<g transform="translate(${x} ${y}) scale(${size / 24})" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${tablerPaths(name)}</g>`;
+const textW = (s, size) => Math.round(s.length * size * 0.55);
+
+const pillWidth = (label, size, icon) => textW(label, size) + (icon ? size + 8 : 0) + size * 1.8;
+
+// small glass pill with optional leading icon; returns [svg, width]
+function pill(x, y, label, size, t, icon) {
+  const tw = textW(label, size), h = size * 2.2, iw = icon ? size + 8 : 0, w = pillWidth(label, size, icon);
+  const svgOut = `${glass(x, y, w, h, h / 2, t, { magnify: 1.3 })}
+    ${icon ? outlineIcon(icon, x + size * 0.9, y + (h - size * 1.15) / 2, size * 1.15, t.text) : ''}
+    <text x="${x + size * 0.9 + iw}" y="${y + h / 2 + size * 0.36}" font-size="${size}" font-weight="600" textLength="${tw}" lengthAdjust="spacingAndGlyphs" fill="${t.text}">${esc(label)}</text>`;
+  return [svgOut, w];
+}
+
+function projectCard(t, p) {
+  const W = 600, H = 320, a = AREAS[p.area];
+  return svg(W, H, t, () => {
+    const [areaPill] = pill(44, 44, a.label, 15, t, a.icon);
+    const linkLabel = `${p.link} ↗`, lw = pillWidth(linkLabel, 15);
+    const [linkPill] = pill(W - 44 - lw, 44, linkLabel, 15, t);
+    let x = 44;
+    const chips = p.tags.map((tag) => { const [s, w] = pill(x, 238, tag, 14, t); x += w + 8; return s; }).join('');
+    return `${glass(20, 20, W - 40, H - 40, 30, t)}
+    ${areaPill}${linkPill}
+    <text x="46" y="140" font-size="${p.title.length > 24 ? 32 : 36}" font-weight="700" letter-spacing="-1" fill="${t.text}">${esc(p.title)}</text>
+    <text x="47" y="176" font-size="17" font-weight="500" fill="${t.text}">${esc(p.pt)}</text>
+    <text x="47" y="202" font-size="16" font-weight="500" fill="${t.sub}">${esc(p.en)}</text>
+    ${chips}
+    <text x="${W - 46}" y="262" text-anchor="end" font-size="14" font-weight="500" fill="${t.sub}">${esc(p.metric)}</text>`;
+  }, 26);
+}
+
+function projectsHeader(t) {
+  const W = 1200, H = 140;
+  return svg(W, H, t, () => {
+    const label = 'All repositories ↗', aw = pillWidth(label, 16);
+    const back = glass(56, 24, W - 112, H - 48, 34, t); // drawn first so the pill sits on top
+    const [all] = pill(W - 96 - aw, H / 2 - 17.6, label, 16, t);
+    return `${back}
+    <text x="96" y="82" font-size="36" font-weight="700" letter-spacing="-1" fill="${t.text}">Projects <tspan fill="${t.sub}" font-weight="600">· Projetos</tspan></text>
+    ${all}`;
+  }, 26);
+}
+
+// Rewrites the README block between the projects markers from PROJECTS.
+function projectsSection() {
+  const base = `https://raw.githubusercontent.com/${USER}/${USER}/main/assets`;
+  const pic = (file, alt, width) => `<picture><source media="(prefers-color-scheme: dark)" srcset="${base}/${file}-dark.svg"><img alt="${alt}" src="${base}/${file}-light.svg" width="${width}"></picture>`;
+  const cards = PROJECTS.map((p) => `<a href="https://github.com/${USER}/${p.repo}">${pic(`project-${p.repo}`, esc(`${p.title}: ${p.en}`), '49%')}</a>`);
+  const rows = [];
+  for (let i = 0; i < cards.length; i += 2) rows.push(cards.slice(i, i + 2).join('\n'));
+  return `<!-- projects:start -->
+<a href="https://github.com/${USER}?tab=repositories">${pic('projects', 'Projects · Projetos', '100%')}</a>
+
+${rows.join('\n\n')}
+<!-- projects:end -->`;
+}
+
 const data = await fetchStats();
 mkdirSync(OUT, { recursive: true });
 for (const [name, t] of Object.entries(THEMES)) {
@@ -317,12 +401,14 @@ for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(join(OUT, `stack-${name}.svg`), dock(t));
   writeFileSync(join(OUT, `stats-${name}.svg`), stats(t, data));
   for (const b of BUTTONS) writeFileSync(join(OUT, `${b.file}-${name}.svg`), button(t, b));
+  writeFileSync(join(OUT, `projects-${name}.svg`), projectsHeader(t));
+  for (const p of PROJECTS) writeFileSync(join(OUT, `project-${p.repo}-${name}.svg`), projectCard(t, p));
 }
 // Stamp each asset URL in the README with a content hash, so browsers fetch the new
 // image as soon as it changes instead of showing a cached copy for a few minutes.
 const README = join(ROOT, 'README.md');
 if (OUT === join(ROOT, 'assets') && existsSync(README)) {
-  const md = readFileSync(README, 'utf8').replace(/assets\/([\w-]+\.svg)(\?v=\w+)?/g, (_, f) =>
+  const md = readFileSync(README, 'utf8').replace(/<!-- projects:start -->[\s\S]*?<!-- projects:end -->/, () => projectsSection()).replace(/assets\/([\w-]+\.svg)(\?v=\w+)?/g, (_, f) =>
     `assets/${f}?v=${createHash('sha1').update(readFileSync(join(OUT, f))).digest('hex').slice(0, 8)}`);
   writeFileSync(README, md);
 }
