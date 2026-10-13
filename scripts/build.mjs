@@ -2,7 +2,8 @@
 // Usage: node scripts/build.mjs            -> real stats from the GitHub API (needs GITHUB_TOKEN)
 //        node scripts/build.mjs --sample   -> placeholder numbers, for previewing the design
 // Options: --palette=neutral|rust (default rust), --out=<dir> (default assets)
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -295,5 +296,13 @@ for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(join(OUT, `header-${name}.svg`), header(t));
   writeFileSync(join(OUT, `stack-${name}.svg`), dock(t));
   writeFileSync(join(OUT, `stats-${name}.svg`), stats(t, data));
+}
+// Stamp each asset URL in the README with a content hash, so browsers fetch the new
+// image as soon as it changes instead of showing a cached copy for a few minutes.
+const README = join(ROOT, 'README.md');
+if (OUT === join(ROOT, 'assets') && existsSync(README)) {
+  const md = readFileSync(README, 'utf8').replace(/assets\/([\w-]+\.svg)(\?v=\w+)?/g, (_, f) =>
+    `assets/${f}?v=${createHash('sha1').update(readFileSync(join(OUT, f))).digest('hex').slice(0, 8)}`);
+  writeFileSync(README, md);
 }
 console.log('assets written:', data);
