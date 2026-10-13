@@ -290,12 +290,33 @@ function stats(t, d) {
   ${bar}${legend}`, 28);
 }
 
+// ---------- contact buttons: one glass pill per link (README links need one image each) ----------
+const BUTTONS = [
+  { file: 'btn-linkedin', label: 'LinkedIn', icon: (x, y, s) => `<rect x="${x}" y="${y}" width="${s}" height="${s}" rx="${s * 0.22}" fill="#fff"/>
+    <text x="${x + s * 0.5}" y="${y + s * 0.78}" text-anchor="middle" font-size="${s * 0.74}" font-weight="800" letter-spacing="-0.5" fill="#B7410E">in</text>` },
+  { file: 'btn-instagram', label: 'Instagram', icon: (x, y, s) => `<path transform="translate(${x} ${y}) scale(${s / 24})" d="${iconPath('instagram')}" fill="#fff"/>` },
+];
+
+function button(t, b) {
+  paneId = 0;
+  const PW = 200, PH = 60, X = 8, Y = 6, CW = PW + 16, CH = PH + 22;
+  const ICON = 26, GAP = 12, TL = Math.round(b.label.length * 10.6);
+  const sx = X + (PW - (ICON + GAP + TL)) / 2;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${CW}" height="${CH}" viewBox="0 0 ${CW} ${CH}" font-family="${FONT}">
+  <defs>${wallpaper(CW, CH, t, 18)}</defs>
+  ${glass(X, Y, PW, PH, PH / 2, t, { magnify: 1.25 })}
+  ${b.icon(sx, Y + (PH - ICON) / 2, ICON)}
+  <text x="${sx + ICON + GAP}" y="${Y + PH / 2 + 7}" font-size="19" font-weight="600" textLength="${TL}" lengthAdjust="spacingAndGlyphs" fill="${t.text}">${esc(b.label)}</text>
+</svg>\n`;
+}
+
 const data = await fetchStats();
 mkdirSync(OUT, { recursive: true });
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(join(OUT, `header-${name}.svg`), header(t));
   writeFileSync(join(OUT, `stack-${name}.svg`), dock(t));
   writeFileSync(join(OUT, `stats-${name}.svg`), stats(t, data));
+  for (const b of BUTTONS) writeFileSync(join(OUT, `${b.file}-${name}.svg`), button(t, b));
 }
 // Stamp each asset URL in the README with a content hash, so browsers fetch the new
 // image as soon as it changes instead of showing a cached copy for a few minutes.
