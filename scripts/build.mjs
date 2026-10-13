@@ -326,6 +326,12 @@ const PROJECTS = [
     tags: ['React', 'TypeScript', 'Vite'], metric: '30 módulos · 7 fases', link: 'Demo',
   },
   {
+    repo: 'inn-aroma', area: 'sites', title: 'INN AROMA · Concept',
+    pt: 'Proposta de site para marca de aromas, com difusor 3D',
+    en: 'Unofficial redesign concept with a three.js diffuser',
+    tags: ['React', 'three.js', 'Vite'], metric: 'não oficial · unofficial', link: 'Site',
+  },
+  {
     repo: 'kit-editar', area: 'motion', title: 'Kit EDITAR',
     pt: 'Prompts para editar reels com motion e legenda karaokê',
     en: 'Step-by-step kit to edit reels with AI, word-synced',
