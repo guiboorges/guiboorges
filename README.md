@@ -11,8 +11,8 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=4883bc29">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=511012fd" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=157362b8">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=a1991ccf" width="100%">
 </picture>
 
 <!-- projects:start -->
@@ -22,6 +22,7 @@
 <a href="https://github.com/guiboorges/inn-aroma"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-inn-aroma-dark.svg?v=acd807c5"><img alt="INN AROMA · Concept: Unofficial redesign concept with a three.js diffuser" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-inn-aroma-light.svg?v=b8ec733a" width="49%"></picture></a>
 
 <a href="https://github.com/guiboorges/kit-editar"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-kit-editar-dark.svg?v=9b28eee6"><img alt="Kit EDITAR: Step-by-step kit to edit reels with AI, word-synced" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-kit-editar-light.svg?v=f11dd2d2" width="49%"></picture></a>
+<a href="https://github.com/guiboorges/memoria-ia-obsidian"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-memoria-ia-obsidian-dark.svg?v=9332fc53"><img alt="Memória de IA com Obsidian: Long-term AI memory with Obsidian, MCP and Claude hooks" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-memoria-ia-obsidian-light.svg?v=d8f954c5" width="49%"></picture></a>
 <!-- projects:end -->
 
 <a href="https://www.linkedin.com/in/guilherme-borges-113a2a168/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-dark.svg?v=f17af1f1"><img alt="LinkedIn" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-light.svg?v=96f9d3e7" height="56"></picture></a>

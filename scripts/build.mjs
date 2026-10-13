@@ -332,6 +332,12 @@ const PROJECTS = [
     tags: ['React', 'three.js', 'Vite'], metric: 'não oficial · unofficial', link: 'Site',
   },
   {
+    repo: 'memoria-ia-obsidian', area: 'ia', title: 'Memória de IA com Obsidian',
+    pt: 'Tutorial: memória de longo prazo para o Claude por projeto',
+    en: 'Long-term AI memory with Obsidian, MCP and Claude hooks',
+    tags: ['Claude Code', 'Obsidian', 'MCP'], metric: 'tutorial · template', link: 'Guia',
+  },
+  {
     repo: 'kit-editar', area: 'motion', title: 'Kit EDITAR',
     pt: 'Prompts para editar reels com motion e legenda karaokê',
     en: 'Step-by-step kit to edit reels with AI, word-synced',
