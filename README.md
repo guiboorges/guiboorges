@@ -6,8 +6,8 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stack-dark.svg?v=466ea08c">
-  <img alt="Tech stack: Python, TypeScript, React, Next.js, Node.js, Supabase, Postgres, Vercel, Figma, Claude" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stack-light.svg?v=bd668ff9" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stack-dark.svg?v=87183ce4">
+  <img alt="Tech stack: Python, TypeScript, C, React, Next.js, Node.js, Supabase, Postgres, AWS, Vercel, Git, Linux, Figma, Claude" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stack-light.svg?v=ac978e62" width="100%">
 </picture>
 
 <picture>

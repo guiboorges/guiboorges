@@ -188,22 +188,28 @@ function header(t) {
 }
 
 // ---------- dock: tech stack as app icons ----------
+// Grouped: languages → web → data → infra → design/AI.
+// `file`/`vb` let an icon come from another set (Devicon uses a 128 viewBox); `k` = logo size as a fraction of the tile.
 const STACK = [
   { slug: 'python', name: 'Python', g: ['#4B8BBE', '#2b5b84'], fg: '#FFD43B' },
   { slug: 'typescript', name: 'TypeScript', g: ['#4a90e2', '#235a97'], fg: '#fff' },
+  { slug: 'c', name: 'C', g: ['#659AD2', '#283593'], fg: '#fff' },
   { slug: 'react', name: 'React', g: ['#2c3140', '#14161c'], fg: '#61DAFB' },
   { slug: 'nextdotjs', name: 'Next.js', g: ['#3a3a3c', '#000'], fg: '#fff' },
   { slug: 'nodedotjs', name: 'Node.js', g: ['#7cc26a', '#3d7a32'], fg: '#fff' },
   { slug: 'supabase', name: 'Supabase', g: ['#2a2a2e', '#121214'], fg: '#3ECF8E' },
   { slug: 'postgresql', name: 'Postgres', g: ['#5b82ef', '#2f4fb0'], fg: '#fff' },
+  { slug: 'aws', file: 'dev-amazonwebservices-plain-wordmark', vb: 128, k: 0.7, name: 'AWS', g: ['#37475a', '#232F3E'], fg: '#FF9900' },
   { slug: 'vercel', name: 'Vercel', g: ['#3a3a3c', '#000'], fg: '#fff' },
+  { slug: 'git', name: 'Git', g: ['#F05032', '#b8361c'], fg: '#fff' },
+  { slug: 'linux', name: 'Linux', g: ['#3a3a3c', '#111'], fg: '#FCC624' },
   { slug: 'figma', name: 'Figma', g: ['#F24E1E', '#A259FF'], fg: '#fff' },
   { slug: 'claude', name: 'Claude', g: ['#e8916f', '#c0603f'], fg: '#fff' },
 ];
-const iconPath = (slug) => readFileSync(join(ROOT, 'scripts/icons', `${slug}.svg`), 'utf8').match(/<path d="([^"]+)"/)[1];
+const iconPath = (file) => readFileSync(join(ROOT, 'scripts/icons', `${file}.svg`), 'utf8').match(/<path[^>]*\sd="([^"]+)"/)[1];
 
 function dock(t) {
-  const W = 1200, H = 230, S = 76, GAP = 20, PAD = 22;
+  const W = 1200, H = 220, S = 62, GAP = 12, PAD = 20;
   const dw = STACK.length * S + (STACK.length - 1) * GAP + PAD * 2, dh = S + PAD * 2;
   const dx = (W - dw) / 2, dy = 36;
   return svg(W, H, t, () => `
@@ -219,8 +225,8 @@ function dock(t) {
       <rect x="${x}" y="${y}" width="${S}" height="${S}" rx="${S * 0.235}" fill="url(#ig${i})"/>
       <rect x="${x}" y="${y}" width="${S}" height="${S}" rx="${S * 0.235}" fill="url(#ih${i})"/>
       <rect x="${x + 0.5}" y="${y + 0.5}" width="${S - 1}" height="${S - 1}" rx="${S * 0.235}" fill="none" stroke="#fff" stroke-opacity=".28"/>
-      <path transform="translate(${x + S * 0.24} ${y + S * 0.24}) scale(${(S * 0.52) / 24})" d="${iconPath(s.slug)}" fill="${s.fg}"/>
-      <text x="${x + S / 2}" y="${dy + dh + 30}" text-anchor="middle" font-size="14" font-weight="500" fill="${t.sub}">${esc(s.name)}</text>
+      <path transform="translate(${x + (S - S * (s.k || 0.52)) / 2} ${y + (S - S * (s.k || 0.52)) / 2}) scale(${(S * (s.k || 0.52)) / (s.vb || 24)})" d="${iconPath(s.file || s.slug)}" fill="${s.fg}"/>
+      <text x="${x + S / 2}" y="${dy + dh + 28}" text-anchor="middle" font-size="12.5" font-weight="500" fill="${t.sub}">${esc(s.name)}</text>
     </g>`;
   }).join('')}`, 30);
 }
