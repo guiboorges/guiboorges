@@ -4,12 +4,12 @@
 // Options: --palette=neutral|rust (default rust), --out=<dir> (default assets)
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { dirname, join } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || '').split('=')[1] || d;
-const OUT = join(ROOT, arg('out', 'assets'));
+const OUT = resolve(ROOT, arg('out', 'assets'));
 const USER = process.env.GH_USER || 'guiboorges';
 const SAMPLE = process.argv.includes('--sample');
 
@@ -327,15 +327,18 @@ function button(t, b) {
 }
 
 // ---------- projects: one glass card per repo, grouped by area ----------
-// To add a project: append an entry here and run the build (the README section is regenerated).
+// Every public repo gets a card automatically, built from its GitHub description, topics,
+// languages and homepage. CURATED entries replace that with hand-written copy.
+// A repo with the topic `hide-from-profile` (or an archived one) is left out.
 const AREAS = {
   ensino: { icon: 'school', label: 'Education' },
   sites: { icon: 'world-www', label: 'Web' },
   motion: { icon: 'movie', label: 'Motion & Video' },
   ia: { icon: 'sparkles', label: 'AI' },
   apps: { icon: 'device-laptop', label: 'Mac apps' },
+  code: { icon: 'code', label: 'Code' },
 };
-const PROJECTS = [
+const CURATED = [
   {
     repo: 'plataforma-engenharia-ia', area: 'ensino', title: 'AI Engineering Platform',
     desc: 'Self-study platform: lessons, widgets, exams, review',
@@ -372,7 +375,83 @@ const PROJECTS = [
     detail: 'Native SwiftUI, no network, Trash by default',
     tags: ['Swift', 'SwiftUI', 'macOS'], metric: '8 modules · 92 tests', link: 'Download',
   },
-].sort((a, b) => Object.keys(AREAS).indexOf(a.area) - Object.keys(AREAS).indexOf(b.area));
+];
+
+// First matching area wins, so the more specific ones come first.
+const AREA_TOPICS = [
+  ['apps', ['macos', 'ios', 'swiftui', 'mac-app']],
+  ['motion', ['motion', 'motion-design', 'video', 'video-editing']],
+  ['ensino', ['education', 'ensino', 'course', 'self-study']],
+  ['sites', ['website', 'sites', 'landing-page']],
+  ['ia', ['ai', 'ai-agents', 'claude', 'llm', 'mcp']],
+];
+
+async function fetchRepos() {
+  if (SAMPLE) return CURATED.map((p, i) => ({ name: p.repo, topics: [], languages: [], release: i % 2 ? 'v1.0.0' : null }));
+  const query = `query($login:String!){user(login:$login){
+    repositories(first:100, ownerAffiliations:OWNER, isFork:false, privacy:PUBLIC, orderBy:{field:CREATED_AT, direction:ASC}){nodes{
+      name description homepageUrl isArchived latestRelease{tagName}
+      repositoryTopics(first:20){nodes{topic{name}}}
+      languages(first:3, orderBy:{field:SIZE, direction:DESC}){nodes{name}}}}}}`;
+  const res = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: { Authorization: `bearer ${process.env.GITHUB_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query, variables: { login: USER } }),
+  });
+  const { data, errors } = await res.json();
+  if (errors) throw new Error(JSON.stringify(errors));
+  return data.user.repositories.nodes.map((r) => ({
+    name: r.name, description: r.description || '', homepage: r.homepageUrl, archived: r.isArchived,
+    release: r.latestRelease?.tagName || null,
+    topics: r.repositoryTopics.nodes.map((n) => n.topic.name),
+    languages: r.languages.nodes.map((n) => n.name),
+  }));
+}
+
+// Splits text into lines of at most `max` characters at word boundaries; the last line gets an ellipsis if cut.
+function wrap(text, max, lines) {
+  const out = [''];
+  for (const word of text.split(/\s+/).filter(Boolean)) {
+    const cur = out[out.length - 1];
+    if ((cur ? cur.length + 1 : 0) + word.length <= max) out[out.length - 1] = cur ? `${cur} ${word}` : word;
+    else if (out.length < lines) out.push(word);
+    else { out[out.length - 1] = clip(`${cur} ${word}`, max); break; }
+  }
+  return out;
+}
+
+// Topics that make good card tags; anything else falls back to the repo's main languages.
+const TOPIC_LABELS = {
+  react: 'React', nextjs: 'Next.js', vite: 'Vite', threejs: 'three.js', tailwindcss: 'Tailwind',
+  supabase: 'Supabase', postgres: 'Postgres', swift: 'Swift', swiftui: 'SwiftUI', macos: 'macOS',
+  python: 'Python', typescript: 'TypeScript', claude: 'Claude', 'claude-code': 'Claude Code',
+  mcp: 'MCP', obsidian: 'Obsidian', hyperframes: 'HyperFrames', gsap: 'GSAP',
+};
+
+function autoProject(r) {
+  const fromTopics = r.topics.map((tp) => TOPIC_LABELS[tp]).filter(Boolean);
+  const fromLangs = r.languages.filter((l) => !['HTML', 'CSS'].includes(l));
+  const [desc, detail = ''] = wrap(r.description || 'No description yet', 52, 2);
+  return {
+    repo: r.name,
+    area: (AREA_TOPICS.find(([, topics]) => topics.some((tp) => r.topics.includes(tp))) || ['code'])[0],
+    title: r.name.split(/[-_]/).map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+    desc, detail,
+    tags: [...new Set([...fromTopics, ...fromLangs])].slice(0, 3),
+    metric: '',
+    link: r.homepage ? 'Site' : 'Repo',
+  };
+}
+
+function buildProjects(repos) {
+  const areaOrder = Object.keys(AREAS);
+  return repos
+    .filter((r) => r.name !== USER && !r.archived && !r.topics.includes('hide-from-profile'))
+    .map((r) => ({ ...(CURATED.find((p) => p.repo === r.name) || autoProject(r)), release: r.release }))
+    // curated cards keep their hand-picked order; new repos follow, oldest first
+    .sort((a, b) => areaOrder.indexOf(a.area) - areaOrder.indexOf(b.area)
+      || (CURATED.findIndex((p) => p.repo === a.repo) + 1 || 1e3) - (CURATED.findIndex((p) => p.repo === b.repo) + 1 || 1e3));
+}
 
 const tablerPaths = (name) => [...readFileSync(join(ROOT, 'scripts/icons', `tabler-${name}.svg`), 'utf8')
   .matchAll(/<path (?!stroke="none")[^>]*d="([^"]+)"/g)].map((m) => `<path d="${m[1]}"/>`).join('');
@@ -397,10 +476,11 @@ function projectCard(t, p) {
     const [areaPill] = pill(44, 44, a.label, 15, t, a.icon);
     const linkLabel = `${p.link} ↗`, lw = pillWidth(linkLabel, 15);
     const [linkPill] = pill(W - 44 - lw, 44, linkLabel, 15, t);
+    const [releasePill] = p.release ? pill(W - 44 - lw - 8 - pillWidth(p.release, 15), 44, p.release, 15, t) : [''];
     let x = 44;
     const chips = p.tags.map((tag) => { const [s, w] = pill(x, 238, tag, 14, t); x += w + 8; return s; }).join('');
     return `${glass(20, 20, W - 40, H - 40, 30, t)}
-    ${areaPill}${linkPill}
+    ${areaPill}${releasePill}${linkPill}
     <text x="46" y="140" font-size="${p.title.length > 24 ? 32 : 36}" font-weight="700" letter-spacing="-1" fill="${t.text}">${esc(p.title)}</text>
     <text x="47" y="176" font-size="17" font-weight="500" fill="${t.text}">${esc(p.desc)}</text>
     <text x="47" y="202" font-size="16" font-weight="500" fill="${t.sub}">${esc(p.detail)}</text>
@@ -503,6 +583,7 @@ ${rows.join('\n\n')}
 
 const data = await fetchStats();
 const activity = await fetchActivity();
+const PROJECTS = buildProjects(await fetchRepos());
 mkdirSync(OUT, { recursive: true });
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(join(OUT, `header-${name}.svg`), header(t));
@@ -521,4 +602,4 @@ if (OUT === join(ROOT, 'assets') && existsSync(README)) {
     `assets/${f}?v=${createHash('sha1').update(readFileSync(join(OUT, f))).digest('hex').slice(0, 8)}`);
   writeFileSync(README, md);
 }
-console.log('assets written:', data, activity);
+console.log('assets written:', data, activity, PROJECTS.map((p) => `${p.repo} [${p.area}] ${p.release || '-'}`));

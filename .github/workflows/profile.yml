@@ -2,8 +2,11 @@ name: Update profile
 
 on:
   schedule:
-    - cron: "0 6 * * *" # every day at 06:00 UTC
+    - cron: "17 * * * *" # every hour (off the top of the hour, when Actions is busiest)
   workflow_dispatch:
+  # Instant refresh: other repos can send `repo-updated` (needs a token secret there, see CLAUDE.md)
+  repository_dispatch:
+    types: [repo-updated]
   push:
     branches: [main]
     paths: ["scripts/**", ".github/workflows/profile.yml"]
