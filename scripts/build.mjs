@@ -177,13 +177,13 @@ function header(t) {
   <g transform="translate(100 104)">
     <circle r="7" fill="#FF5F57"/><circle cx="24" r="7" fill="#FEBC2E"/><circle cx="48" r="7" fill="#28C840"/>
   </g>
-  ${glass(W - 396, 84, 296, 40, 20, t, { magnify: 1.3 })}
-  <g transform="translate(${W - 372} 104)">
+  ${glass(W - 284, 84, 184, 40, 20, t, { magnify: 1.3 })}
+  <g transform="translate(${W - 260} 104)">
     <circle r="5" fill="#30D158"><animate attributeName="opacity" values="1;.35;1" dur="2s" repeatCount="indefinite"/></circle>
-    <text x="16" y="5.5" font-size="15" font-weight="500" textLength="230" lengthAdjust="spacingAndGlyphs" fill="${t.text}">Open to projects · Disponível</text>
+    <text x="16" y="5.5" font-size="15" font-weight="500" textLength="128" lengthAdjust="spacingAndGlyphs" fill="${t.text}">Open to projects</text>
   </g>
   <text x="100" y="212" font-size="68" font-weight="700" letter-spacing="-2" fill="${t.text}">Guilherme Borges</text>
-  ${typing(102, 268, ['AI Automation Developer', 'Dev & Automação com IA'], 32, t)}
+  ${typing(102, 268, ['AI Automation Developer', 'Building AI agents & web apps'], 32, t)}
   <text x="102" y="322" font-size="18" font-weight="500" fill="${t.sub}">AI agents · Automation · Full-stack web · Design</text>`);
 }
 
@@ -265,9 +265,9 @@ async function fetchStats() {
 function stats(t, d) {
   const W = 1200, H = 280, Y = 40, WH = 200, R = 34, GAP = 20;
   const small = [
-    ['Commits', 'this year · este ano', d.commits, '#30D158'],
-    ['Repos', 'public · públicos', d.repos, '#0A84FF'],
-    ['Stars', 'earned · recebidas', d.stars, '#FF9F0A'],
+    ['Commits', 'this year', d.commits, '#30D158'],
+    ['Repos', 'public repos', d.repos, '#0A84FF'],
+    ['Stars', 'earned', d.stars, '#FF9F0A'],
   ];
   const sw = 210, ww = 1200 - 120 - 3 * sw - 3 * GAP;
   const widgets = small.map(([k, sub, v, c], i) => {
@@ -280,7 +280,7 @@ function stats(t, d) {
   }).join('');
   const x = 60 + 3 * (sw + GAP), bw = ww - 52;
   let off = 0;
-  const langs = d.langs.length ? d.langs : [['No code yet · Sem código ainda', 100]];
+  const langs = d.langs.length ? d.langs : [['No code yet', 100]];
   const bar = langs.map(([n, p]) => {
     const w = (p / 100) * bw, r = `<rect x="${x + 26 + off}" y="${Y + 76}" width="${Math.max(w - 3, 2)}" height="12" rx="6" fill="${LANG_COLORS[n] || '#8E8E93'}"/>`;
     off += w; return r;
@@ -292,7 +292,7 @@ function stats(t, d) {
   }).join('');
   return svg(W, H, t, () => `${widgets}
   ${glass(x, Y, ww, WH, R, t)}
-  <text x="${x + 26}" y="${Y + 44}" font-size="17" font-weight="600" fill="${t.text}">Top languages <tspan fill="${t.sub}" font-weight="500">· linguagens</tspan></text>
+  <text x="${x + 26}" y="${Y + 44}" font-size="17" font-weight="600" fill="${t.text}">Top languages</text>
   ${bar}${legend}`, 28);
 }
 
@@ -319,41 +319,41 @@ function button(t, b) {
 // ---------- projects: one glass card per repo, grouped by area ----------
 // To add a project: append an entry here and run the build (the README section is regenerated).
 const AREAS = {
-  ensino: { icon: 'school', label: 'Ensino · Education' },
-  sites: { icon: 'world-www', label: 'Sites · Web' },
-  motion: { icon: 'movie', label: 'Motion & Vídeo' },
-  ia: { icon: 'sparkles', label: 'IA · AI' },
+  ensino: { icon: 'school', label: 'Education' },
+  sites: { icon: 'world-www', label: 'Web' },
+  motion: { icon: 'movie', label: 'Motion & Video' },
+  ia: { icon: 'sparkles', label: 'AI' },
 };
 const PROJECTS = [
   {
-    repo: 'plataforma-engenharia-ia', area: 'ensino', title: 'Plataforma de Engenharia de IA',
-    pt: 'Estudo autodidata de IA: aulas, widgets, provas e revisão',
-    en: 'Self-study AI Engineering platform with a live demo',
-    tags: ['React', 'TypeScript', 'Vite'], metric: '30 módulos · 7 fases', link: 'Demo',
+    repo: 'plataforma-engenharia-ia', area: 'ensino', title: 'AI Engineering Platform',
+    desc: 'Self-study platform: lessons, widgets, exams, review',
+    detail: 'My own AI Engineering course, with a live demo',
+    tags: ['React', 'TypeScript', 'Vite'], metric: '30 modules · 7 phases', link: 'Demo',
   },
   {
     repo: 'inn-aroma', area: 'sites', title: 'INN AROMA · Concept',
-    pt: 'Proposta de site para marca de aromas, com difusor 3D',
-    en: 'Unofficial redesign concept with a three.js diffuser',
-    tags: ['React', 'three.js', 'Vite'], metric: 'não oficial · unofficial', link: 'Site',
+    desc: 'Website concept for a scent brand, with a 3D diffuser',
+    detail: 'Unofficial redesign proposal built with three.js',
+    tags: ['React', 'three.js', 'Vite'], metric: 'unofficial concept', link: 'Site',
   },
   {
     repo: 'borg-business-os', area: 'ia', title: 'BORG Business OS',
-    pt: 'Painel de gestão com 6 agentes de IA e memória longa',
-    en: 'Solo-founder dashboard with 6 AI agents and memory',
-    tags: ['Next.js', 'Supabase', 'Claude'], metric: '6 agentes · 9 tools', link: 'Repo',
+    desc: 'Business dashboard with 6 AI agents and long memory',
+    detail: 'Built for solo founders: pipeline, goals, roadmap',
+    tags: ['Next.js', 'Supabase', 'Claude'], metric: '6 agents · 9 tools', link: 'Repo',
   },
   {
-    repo: 'memoria-ia-obsidian', area: 'ia', title: 'Memória de IA com Obsidian',
-    pt: 'Tutorial: memória de longo prazo para o Claude por projeto',
-    en: 'Long-term AI memory with Obsidian, MCP and Claude hooks',
-    tags: ['Claude Code', 'Obsidian', 'MCP'], metric: 'tutorial · template', link: 'Guia',
+    repo: 'memoria-ia-obsidian', area: 'ia', title: 'AI Memory with Obsidian',
+    desc: 'Tutorial: long-term memory for Claude, per project',
+    detail: 'One vault per project, MCP and Claude Code hooks',
+    tags: ['Claude Code', 'Obsidian', 'MCP'], metric: 'tutorial · template', link: 'Guide',
   },
   {
     repo: 'kit-editar', area: 'motion', title: 'Kit EDITAR',
-    pt: 'Prompts para editar reels com motion e legenda karaokê',
-    en: 'Step-by-step kit to edit reels with AI, word-synced',
-    tags: ['Claude Code', 'HyperFrames', 'GSAP'], metric: '11 prompts · 7 agentes', link: 'Site',
+    desc: 'Prompt kit to edit reels with motion and karaoke captions',
+    detail: 'Step by step with AI, every cue synced to the word',
+    tags: ['Claude Code', 'HyperFrames', 'GSAP'], metric: '11 prompts · 7 agents', link: 'Site',
   },
 ].sort((a, b) => Object.keys(AREAS).indexOf(a.area) - Object.keys(AREAS).indexOf(b.area));
 
@@ -385,8 +385,8 @@ function projectCard(t, p) {
     return `${glass(20, 20, W - 40, H - 40, 30, t)}
     ${areaPill}${linkPill}
     <text x="46" y="140" font-size="${p.title.length > 24 ? 32 : 36}" font-weight="700" letter-spacing="-1" fill="${t.text}">${esc(p.title)}</text>
-    <text x="47" y="176" font-size="17" font-weight="500" fill="${t.text}">${esc(p.pt)}</text>
-    <text x="47" y="202" font-size="16" font-weight="500" fill="${t.sub}">${esc(p.en)}</text>
+    <text x="47" y="176" font-size="17" font-weight="500" fill="${t.text}">${esc(p.desc)}</text>
+    <text x="47" y="202" font-size="16" font-weight="500" fill="${t.sub}">${esc(p.detail)}</text>
     ${chips}
     <text x="${W - 46}" y="262" text-anchor="end" font-size="14" font-weight="500" fill="${t.sub}">${esc(p.metric)}</text>`;
   }, 26);
@@ -399,7 +399,7 @@ function projectsHeader(t) {
     const back = glass(56, 24, W - 112, H - 48, 34, t); // drawn first so the pill sits on top
     const [all] = pill(W - 96 - aw, H / 2 - 17.6, label, 16, t);
     return `${back}
-    <text x="96" y="82" font-size="36" font-weight="700" letter-spacing="-1" fill="${t.text}">Projects <tspan fill="${t.sub}" font-weight="600">· Projetos</tspan></text>
+    <text x="96" y="82" font-size="36" font-weight="700" letter-spacing="-1" fill="${t.text}">Projects</text>
     ${all}`;
   }, 26);
 }
@@ -408,11 +408,11 @@ function projectsHeader(t) {
 function projectsSection() {
   const base = `https://raw.githubusercontent.com/${USER}/${USER}/main/assets`;
   const pic = (file, alt, width) => `<picture><source media="(prefers-color-scheme: dark)" srcset="${base}/${file}-dark.svg"><img alt="${alt}" src="${base}/${file}-light.svg" width="${width}"></picture>`;
-  const cards = PROJECTS.map((p) => `<a href="https://github.com/${USER}/${p.repo}">${pic(`project-${p.repo}`, esc(`${p.title}: ${p.en}`), '49%')}</a>`);
+  const cards = PROJECTS.map((p) => `<a href="https://github.com/${USER}/${p.repo}">${pic(`project-${p.repo}`, esc(`${p.title}: ${p.desc}`), '49%')}</a>`);
   const rows = [];
   for (let i = 0; i < cards.length; i += 2) rows.push(cards.slice(i, i + 2).join('\n'));
   return `<!-- projects:start -->
-<a href="https://github.com/${USER}?tab=repositories">${pic('projects', 'Projects · Projetos', '100%')}</a>
+<a href="https://github.com/${USER}?tab=repositories">${pic('projects', 'Projects', '100%')}</a>
 
 ${rows.join('\n\n')}
 <!-- projects:end -->`;

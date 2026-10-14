@@ -78,7 +78,7 @@
   </g>
   <rect x="44.75" y="44.75" width="164.5" height="31.5" rx="16.5" fill="none" stroke="url(#p0r)" stroke-width="1.5"/>
     <g transform="translate(57.5 51.875) scale(0.71875)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12"/><path d="M8 4l0 16"/><path d="M16 4l0 16"/><path d="M4 8l4 0"/><path d="M4 16l4 0"/><path d="M4 12l16 0"/><path d="M16 8l4 0"/><path d="M16 16l4 0"/></g>
-    <text x="80.5" y="65.9" font-size="15" font-weight="600" textLength="116" lengthAdjust="spacingAndGlyphs" fill="#ffffff">Motion &amp; Vídeo</text>
+    <text x="80.5" y="65.9" font-size="15" font-weight="600" textLength="116" lengthAdjust="spacingAndGlyphs" fill="#ffffff">Motion &amp; Video</text>
   <defs>
     <clipPath id="p1c"><rect x="479" y="44" width="77" height="33" rx="16.5"/></clipPath>
     <linearGradient id="p1s" x1="0" y1="0" x2="0" y2="1">
@@ -105,8 +105,8 @@
     
     <text x="492.5" y="65.9" font-size="15" font-weight="600" textLength="50" lengthAdjust="spacingAndGlyphs" fill="#ffffff">Site ↗</text>
     <text x="46" y="140" font-size="36" font-weight="700" letter-spacing="-1" fill="#ffffff">Kit EDITAR</text>
-    <text x="47" y="176" font-size="17" font-weight="500" fill="#ffffff">Prompts para editar reels com motion e legenda karaokê</text>
-    <text x="47" y="202" font-size="16" font-weight="500" fill="rgba(255,240,230,0.75)">Step-by-step kit to edit reels with AI, word-synced</text>
+    <text x="47" y="176" font-size="17" font-weight="500" fill="#ffffff">Prompt kit to edit reels with motion and karaoke captions</text>
+    <text x="47" y="202" font-size="16" font-weight="500" fill="rgba(255,240,230,0.75)">Step by step with AI, every cue synced to the word</text>
     
   <defs>
     <clipPath id="p2c"><rect x="44" y="238" width="110.2" height="30.800000000000004" rx="15.400000000000002"/></clipPath>
@@ -183,5 +183,5 @@
   <rect x="281.15" y="238.75" width="54.7" height="29.300000000000004" rx="15.400000000000002" fill="none" stroke="url(#p4r)" stroke-width="1.5"/>
     
     <text x="293" y="258.44" font-size="14" font-weight="600" textLength="31" lengthAdjust="spacingAndGlyphs" fill="#ffffff">GSAP</text>
-    <text x="554" y="262" text-anchor="end" font-size="14" font-weight="500" fill="rgba(255,240,230,0.75)">11 prompts · 7 agentes</text></g>
+    <text x="554" y="262" text-anchor="end" font-size="14" font-weight="500" fill="rgba(255,240,230,0.75)">11 prompts · 7 agents</text></g>
 </svg>

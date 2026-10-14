@@ -53,7 +53,7 @@
     <rect x="56" y="24" width="1088" height="92" fill="url(#p0s)"/>
   </g>
   <rect x="56.75" y="24.75" width="1086.5" height="90.5" rx="34" fill="none" stroke="url(#p0r)" stroke-width="1.5"/>
-    <text x="96" y="82" font-size="36" font-weight="700" letter-spacing="-1" fill="#ffffff">Projects <tspan fill="rgba(255,240,230,0.75)" font-weight="600">· Projetos</tspan></text>
+    <text x="96" y="82" font-size="36" font-weight="700" letter-spacing="-1" fill="#ffffff">Projects</text>
     
   <defs>
     <clipPath id="p1c"><rect x="917.2" y="52.4" width="186.8" height="35.2" rx="17.6"/></clipPath>
