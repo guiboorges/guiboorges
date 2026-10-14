@@ -188,15 +188,19 @@ function header(t) {
 }
 
 // ---------- dock: tech stack as app icons ----------
-// Grouped: languages → web → data → infra → design/AI.
+// Grouped: languages → web → Apple → data → infra → design/AI.
 // `file`/`vb` let an icon come from another set (Devicon uses a 128 viewBox); `k` = logo size as a fraction of the tile.
 const STACK = [
   { slug: 'python', name: 'Python', g: ['#4B8BBE', '#2b5b84'], fg: '#FFD43B' },
   { slug: 'typescript', name: 'TypeScript', g: ['#4a90e2', '#235a97'], fg: '#fff' },
+  { slug: 'swift', name: 'Swift', g: ['#F88A36', '#E0402A'], fg: '#fff' },
   { slug: 'c', name: 'C', g: ['#659AD2', '#283593'], fg: '#fff' },
   { slug: 'react', name: 'React', g: ['#2c3140', '#14161c'], fg: '#61DAFB' },
   { slug: 'nextdotjs', name: 'Next.js', g: ['#3a3a3c', '#000'], fg: '#fff' },
   { slug: 'nodedotjs', name: 'Node.js', g: ['#7cc26a', '#3d7a32'], fg: '#fff' },
+  { slug: 'tailwindcss', name: 'Tailwind', g: ['#2c3140', '#14161c'], fg: '#38BDF8' },
+  { slug: 'threedotjs', name: 'three.js', g: ['#3a3a3c', '#000'], fg: '#fff' },
+  { slug: 'apple', name: 'SwiftUI', g: ['#3fa9f5', '#0a5fd6'], fg: '#fff' },
   { slug: 'supabase', name: 'Supabase', g: ['#2a2a2e', '#121214'], fg: '#3ECF8E' },
   { slug: 'postgresql', name: 'Postgres', g: ['#5b82ef', '#2f4fb0'], fg: '#fff' },
   { slug: 'aws', file: 'dev-amazonwebservices-plain-wordmark', vb: 128, k: 0.7, name: 'AWS', g: ['#37475a', '#232F3E'], fg: '#FF9900' },
@@ -204,18 +208,23 @@ const STACK = [
   { slug: 'git', name: 'Git', g: ['#F05032', '#b8361c'], fg: '#fff' },
   { slug: 'linux', name: 'Linux', g: ['#3a3a3c', '#111'], fg: '#FCC624' },
   { slug: 'figma', name: 'Figma', g: ['#F24E1E', '#A259FF'], fg: '#fff' },
+  { slug: 'obsidian', name: 'Obsidian', g: ['#9a7cf5', '#4b2bbf'], fg: '#fff' },
   { slug: 'claude', name: 'Claude', g: ['#e8916f', '#c0603f'], fg: '#fff' },
 ];
 const iconPath = (file) => readFileSync(join(ROOT, 'scripts/icons', `${file}.svg`), 'utf8').match(/<path[^>]*\sd="([^"]+)"/)[1];
 
 function dock(t) {
-  const W = 1200, H = 220, S = 62, GAP = 12, PAD = 20;
-  const dw = STACK.length * S + (STACK.length - 1) * GAP + PAD * 2, dh = S + PAD * 2;
-  const dx = (W - dw) / 2, dy = 36;
-  return svg(W, H, t, () => `
-  ${glass(dx, dy, dw, dh, 38, t, { magnify: 1.18 })}
-  ${STACK.map((s, i) => {
-    const x = dx + PAD + i * (S + GAP), y = dy + PAD;
+  // Up to PER_ROW icons per dock; a longer stack wraps into a second dock below, centred.
+  const S = 62, GAP = 12, PAD = 20, PER_ROW = 10, ROW_H = 150;
+  const rows = [];
+  for (let i = 0; i < STACK.length; i += PER_ROW) rows.push(STACK.slice(i, i + PER_ROW).map((s, k) => [s, i + k]));
+  const W = 1200, dh = S + PAD * 2, H = 36 + rows.length * ROW_H + 34;
+  return svg(W, H, t, () => rows.map((row, r) => {
+    const dw = row.length * S + (row.length - 1) * GAP + PAD * 2;
+    const dx = (W - dw) / 2, dy = 36 + r * ROW_H;
+    return `${glass(dx, dy, dw, dh, 38, t, { magnify: 1.18 })}
+  ${row.map(([s, i], k) => {
+    const x = dx + PAD + k * (S + GAP), y = dy + PAD;
     return `<g>
       <animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -10;0 0;0 0" keyTimes="0;${(0.05 + i * 0.03).toFixed(2)};${(0.09 + i * 0.03).toFixed(2)};${(0.14 + i * 0.03).toFixed(2)};1" dur="7s" repeatCount="indefinite"/>
       <defs>
@@ -226,13 +235,14 @@ function dock(t) {
       <rect x="${x}" y="${y}" width="${S}" height="${S}" rx="${S * 0.235}" fill="url(#ih${i})"/>
       <rect x="${x + 0.5}" y="${y + 0.5}" width="${S - 1}" height="${S - 1}" rx="${S * 0.235}" fill="none" stroke="#fff" stroke-opacity=".28"/>
       <path transform="translate(${x + (S - S * (s.k || 0.52)) / 2} ${y + (S - S * (s.k || 0.52)) / 2}) scale(${(S * (s.k || 0.52)) / (s.vb || 24)})" d="${iconPath(s.file || s.slug)}" fill="${s.fg}"/>
-      <text x="${x + S / 2}" y="${dy + dh + 28}" text-anchor="middle" font-size="12.5" font-weight="500" fill="${t.sub}">${esc(s.name)}</text>
+      <text x="${x + S / 2}" y="${dy + dh + 28}" text-anchor="middle" font-size="13.5" font-weight="500" fill="${t.sub}">${esc(s.name)}</text>
     </g>`;
-  }).join('')}`, 30);
+  }).join('')}`;
+  }).join(''), 30);
 }
 
 // ---------- stats: iOS-style widgets ----------
-const LANG_COLORS = { TypeScript: '#3178C6', JavaScript: '#F7DF1E', Python: '#3572A5', HTML: '#E34C26', CSS: '#663399', Shell: '#89E051' };
+const LANG_COLORS = { TypeScript: '#3178C6', JavaScript: '#F7DF1E', Python: '#3572A5', HTML: '#E34C26', CSS: '#663399', Shell: '#89E051', Swift: '#F05138' };
 
 async function fetchStats() {
   if (SAMPLE) return { repos: 12, commits: 248, stars: 37, followers: 21, langs: [['TypeScript', 46], ['Python', 31], ['JavaScript', 15], ['CSS', 8]] };
@@ -413,7 +423,7 @@ function projectsHeader(t) {
 
 // ---------- now building: latest activity across public repos, refreshed by the daily workflow ----------
 // Housekeeping commits (stats refresh, CI, licence, badges) are skipped so each row shows real work.
-const NOISE = /^(chore|ci|build|docs)(\(.+\))?:|^merge\b|licen[cs]e|badge|^translate\b/i;
+const NOISE = /^(chore|ci|build|docs)(\(.+\))?:|^merge\b|licen[cs]e|badge|dependabot|issue template|^translate\b/i;
 
 async function fetchActivity() {
   if (SAMPLE) return [

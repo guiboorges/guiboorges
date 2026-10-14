@@ -6,18 +6,18 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stack-dark.svg?v=87183ce4">
-  <img alt="Tech stack: Python, TypeScript, C, React, Next.js, Node.js, Supabase, Postgres, AWS, Vercel, Git, Linux, Figma, Claude" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stack-light.svg?v=ac978e62" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stack-dark.svg?v=9dfac066">
+  <img alt="Tech stack: Python, TypeScript, Swift, C, React, Next.js, Node.js, Tailwind CSS, three.js, SwiftUI, Supabase, Postgres, AWS, Vercel, Git, Linux, Figma, Obsidian, Claude" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stack-light.svg?v=3c39bf62" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=e9117d14">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=e2eff16a" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=dc6cd92f">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=77e8282e" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=de773e0e">
-  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=38d70225" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=d36a026f">
+  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=eb7bf937" width="100%">
 </picture>
 
 <!-- projects:start -->
