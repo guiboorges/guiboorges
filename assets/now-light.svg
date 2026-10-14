@@ -109,7 +109,7 @@
   </g>
   <rect x="981.35" y="128.75" width="64.9" height="27.1" rx="14.3" fill="none" stroke="url(#p2r)" stroke-width="1.5"/>
     
-    <text x="992.3000000000001" y="146.98000000000002" font-size="13" font-weight="600" textLength="43" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.0.2</text>
+    <text x="992.3000000000001" y="146.98000000000002" font-size="13" font-weight="600" textLength="43" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.0.3</text>
       <text x="1104" y="153" text-anchor="end" font-size="15" font-weight="500" fill="rgba(255,255,255,0.9)">today</text><line x1="96" x2="1104" y1="182" y2="182" stroke="rgba(255,255,255,0.16)"/>
       <g transform="translate(94 202) scale(1.0833333333333333)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 3l0 6"/><path d="M12 15l0 6"/></g>
       <text x="136" y="212" font-size="19" font-weight="700" fill="#ffffff">BORG Business OS</text>
