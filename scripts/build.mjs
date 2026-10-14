@@ -323,6 +323,7 @@ const AREAS = {
   sites: { icon: 'world-www', label: 'Web' },
   motion: { icon: 'movie', label: 'Motion & Video' },
   ia: { icon: 'sparkles', label: 'AI' },
+  apps: { icon: 'device-laptop', label: 'Mac apps' },
 };
 const PROJECTS = [
   {
@@ -354,6 +355,12 @@ const PROJECTS = [
     desc: 'Prompt kit to edit reels with motion and karaoke captions',
     detail: 'Step by step with AI, every cue synced to the word',
     tags: ['Claude Code', 'HyperFrames', 'GSAP'], metric: '11 prompts · 7 agents', link: 'Site',
+  },
+  {
+    repo: 'lustro', area: 'apps', title: 'Lustro',
+    desc: 'Open-source Mac cleaner that shows what it removes',
+    detail: 'Native SwiftUI, no network, Trash by default',
+    tags: ['Swift', 'SwiftUI', 'macOS'], metric: '8 modules · 92 tests', link: 'Download',
   },
 ].sort((a, b) => Object.keys(AREAS).indexOf(a.area) - Object.keys(AREAS).indexOf(b.area));
 
