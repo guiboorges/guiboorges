@@ -55,7 +55,7 @@
   <rect x="60.75" y="40.75" width="208.5" height="198.5" rx="34" fill="none" stroke="url(#p1r)" stroke-width="1.5"/>
     <circle cx="94" cy="78" r="10" fill="#30D158"/>
     <text x="114" y="84" font-size="17" font-weight="600" fill="#ffffff">Commits</text>
-    <text x="84" y="172" font-size="60" font-weight="700" letter-spacing="-2" fill="#ffffff">17</text>
+    <text x="84" y="172" font-size="60" font-weight="700" letter-spacing="-2" fill="#ffffff">29</text>
     <text x="86" y="208" font-size="14" font-weight="500" fill="rgba(255,240,230,0.75)">this year</text>
   <defs>
     <clipPath id="p2c"><rect x="290" y="40" width="210" height="200" rx="34"/></clipPath>
@@ -136,9 +136,9 @@
   </g>
   <rect x="750.75" y="40.75" width="388.5" height="198.5" rx="34" fill="none" stroke="url(#p0r)" stroke-width="1.5"/>
   <text x="776" y="84" font-size="17" font-weight="600" fill="#ffffff">Top languages</text>
-  <rect x="776" y="116" width="223.46" height="12" rx="6" fill="#3178C6"/><rect x="1002.46" y="116" width="67.98" height="12" rx="6" fill="#E34C26"/><rect x="1073.44" y="116" width="17.279999999999998" height="12" rx="6" fill="#663399"/><rect x="1093.72" y="116" width="7.139999999999999" height="12" rx="6" fill="#F7DF1E"/><circle cx="782" cy="163" r="6" fill="#3178C6"/>
+  <rect x="776" y="116" width="223.46" height="12" rx="6" fill="#3178C6"/><rect x="1002.46" y="116" width="64.60000000000001" height="12" rx="6" fill="#E34C26"/><rect x="1070.06" y="116" width="17.279999999999998" height="12" rx="6" fill="#663399"/><rect x="1090.34" y="116" width="7.139999999999999" height="12" rx="6" fill="#F7DF1E"/><circle cx="782" cy="163" r="6" fill="#3178C6"/>
     <text x="796" y="168" font-size="15" font-weight="500" fill="#ffffff">TypeScript <tspan fill="rgba(255,240,230,0.75)">67%</tspan></text><circle cx="951" cy="163" r="6" fill="#E34C26"/>
-    <text x="965" y="168" font-size="15" font-weight="500" fill="#ffffff">HTML <tspan fill="rgba(255,240,230,0.75)">21%</tspan></text><circle cx="782" cy="197" r="6" fill="#663399"/>
+    <text x="965" y="168" font-size="15" font-weight="500" fill="#ffffff">HTML <tspan fill="rgba(255,240,230,0.75)">20%</tspan></text><circle cx="782" cy="197" r="6" fill="#663399"/>
     <text x="796" y="202" font-size="15" font-weight="500" fill="#ffffff">CSS <tspan fill="rgba(255,240,230,0.75)">6%</tspan></text><circle cx="951" cy="197" r="6" fill="#F7DF1E"/>
     <text x="965" y="202" font-size="15" font-weight="500" fill="#ffffff">JavaScript <tspan fill="rgba(255,240,230,0.75)">3%</tspan></text></g>
 </svg>

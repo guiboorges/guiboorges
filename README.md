@@ -11,9 +11,14 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=3c15d199">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=09b5d723" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=170313c8">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=44040bfd" width="100%">
 </picture>
+
+<a href="https://github.com/guiboorges?tab=repositories&sort=updated"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=0f72443b">
+  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=35362c04" width="100%">
+</picture></a>
 
 <!-- projects:start -->
 <a href="https://github.com/guiboorges?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/projects-dark.svg?v=87b8f6d8"><img alt="Projects" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/projects-light.svg?v=273f95af" width="100%"></picture></a>

@@ -404,6 +404,72 @@ function projectsHeader(t) {
   }, 26);
 }
 
+// ---------- now building: latest activity across public repos, refreshed by the daily workflow ----------
+// Housekeeping commits (stats refresh, CI, licence, badges) are skipped so each row shows real work.
+const NOISE = /^(chore|ci|build|docs)(\(.+\))?:|^merge\b|licen[cs]e|badge|^translate\b/i;
+
+async function fetchActivity() {
+  if (SAMPLE) return [
+    { repo: 'borg-business-os', msg: 'Add weekly digest to the Strategy agent', at: Date.now() - 864e5, tag: 'v1.0.0' },
+    { repo: 'kit-editar', msg: 'New prompt: B-roll with auto zoom', at: Date.now() - 3 * 864e5, tag: 'v1.0.0' },
+    { repo: 'inn-aroma', msg: 'Mobile menu: hamburger and header on scroll', at: Date.now() - 9 * 864e5, tag: null },
+  ];
+  const query = `query($login:String!){user(login:$login){
+    repositories(first:8, ownerAffiliations:OWNER, isFork:false, privacy:PUBLIC, orderBy:{field:PUSHED_AT, direction:DESC}){nodes{
+      name latestRelease{tagName}
+      defaultBranchRef{target{... on Commit{history(first:15){nodes{messageHeadline committedDate}}}}}}}}}`;
+  const res = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: { Authorization: `bearer ${process.env.GITHUB_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query, variables: { login: USER } }),
+  });
+  const { data, errors } = await res.json();
+  if (errors) throw new Error(JSON.stringify(errors));
+  return data.user.repositories.nodes
+    .filter((r) => r.name !== USER)
+    .map((r) => {
+      const c = (r.defaultBranchRef?.target.history.nodes || []).find((n) => !NOISE.test(n.messageHeadline));
+      return c && { repo: r.name, msg: c.messageHeadline, at: Date.parse(c.committedDate), tag: r.latestRelease?.tagName || null };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.at - a.at)
+    .slice(0, 3);
+}
+
+function ago(ms) {
+  const d = Math.floor((Date.now() - ms) / 864e5);
+  if (d < 1) return 'today';
+  if (d < 2) return 'yesterday';
+  if (d < 14) return `${d} days ago`;
+  if (d < 60) return `${Math.floor(d / 7)} weeks ago`;
+  return `${Math.floor(d / 30)} months ago`;
+}
+const clip = (s, n) => (s.length > n ? `${s.slice(0, n - 1).trimEnd()}…` : s);
+
+function nowCard(t, items) {
+  const W = 1200, ROW = 66, TOP = 116, H = TOP + Math.max(items.length, 1) * ROW + 36;
+  return svg(W, H, t, () => {
+    const label = 'Updated daily', lw = pillWidth(label, 16);
+    const back = glass(56, 24, W - 112, H - 48, 34, t);
+    const [live] = pill(W - 96 - lw, 42, label, 16, t);
+    const rows = items.map((it, i) => {
+      const y = TOP + i * ROW, title = PROJECTS.find((p) => p.repo === it.repo)?.title || it.repo;
+      const meta = ago(it.at), mw = textW(meta, 15);
+      const tag = it.tag ? pill(W - 96 - mw - 16 - pillWidth(it.tag, 13), y + 12, it.tag, 13, t)[0] : '';
+      return `${i ? `<line x1="96" x2="${W - 96}" y1="${y}" y2="${y}" stroke="${t.grid}"/>` : ''}
+      ${outlineIcon('git-commit', 94, y + 20, 26, t.text)}
+      <text x="136" y="${y + 30}" font-size="19" font-weight="700" fill="${t.text}">${esc(title)}</text>
+      <text x="136" y="${y + 53}" font-size="15" font-weight="500" fill="${t.sub}">${esc(clip(it.msg, 78))}</text>
+      ${tag}
+      <text x="${W - 96}" y="${y + 37}" text-anchor="end" font-size="15" font-weight="500" fill="${t.sub}">${esc(meta)}</text>`;
+    }).join('');
+    return `${back}
+    <circle cx="104" cy="70" r="7" fill="#30D158"><animate attributeName="opacity" values="1;.35;1" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="124" y="82" font-size="36" font-weight="700" letter-spacing="-1" fill="${t.text}">Now building</text>
+    ${live}${rows || `<text x="96" y="${TOP + 36}" font-size="16" fill="${t.sub}">Nothing pushed lately</text>`}`;
+  }, 26);
+}
+
 // Rewrites the README block between the projects markers from PROJECTS.
 function projectsSection() {
   const base = `https://raw.githubusercontent.com/${USER}/${USER}/main/assets`;
@@ -419,12 +485,14 @@ ${rows.join('\n\n')}
 }
 
 const data = await fetchStats();
+const activity = await fetchActivity();
 mkdirSync(OUT, { recursive: true });
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(join(OUT, `header-${name}.svg`), header(t));
   writeFileSync(join(OUT, `stack-${name}.svg`), dock(t));
   writeFileSync(join(OUT, `stats-${name}.svg`), stats(t, data));
   for (const b of BUTTONS) writeFileSync(join(OUT, `${b.file}-${name}.svg`), button(t, b));
+  writeFileSync(join(OUT, `now-${name}.svg`), nowCard(t, activity));
   writeFileSync(join(OUT, `projects-${name}.svg`), projectsHeader(t));
   for (const p of PROJECTS) writeFileSync(join(OUT, `project-${p.repo}-${name}.svg`), projectCard(t, p));
 }
@@ -436,4 +504,4 @@ if (OUT === join(ROOT, 'assets') && existsSync(README)) {
     `assets/${f}?v=${createHash('sha1').update(readFileSync(join(OUT, f))).digest('hex').slice(0, 8)}`);
   writeFileSync(README, md);
 }
-console.log('assets written:', data);
+console.log('assets written:', data, activity);
