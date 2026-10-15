@@ -136,9 +136,9 @@
   </g>
   <rect x="750.75" y="40.75" width="388.5" height="198.5" rx="34" fill="none" stroke="url(#p0r)" stroke-width="1.5"/>
   <text x="776" y="84" font-size="17" font-weight="600" fill="#ffffff">Top languages</text>
-  <rect x="776" y="116" width="193.04" height="12" rx="6" fill="#3178C6"/><rect x="972.04" y="116" width="57.839999999999996" height="12" rx="6" fill="#E34C26"/><rect x="1032.88" y="116" width="34.18" height="12" rx="6" fill="#F05138"/><rect x="1070.06" y="116" width="20.660000000000004" height="12" rx="6" fill="#663399"/><circle cx="782" cy="163" r="6" fill="#3178C6"/>
+  <rect x="776" y="116" width="193.04" height="12" rx="6" fill="#3178C6"/><rect x="972.04" y="116" width="54.46" height="12" rx="6" fill="#E34C26"/><rect x="1029.5" y="116" width="34.18" height="12" rx="6" fill="#F05138"/><rect x="1066.68" y="116" width="20.660000000000004" height="12" rx="6" fill="#663399"/><circle cx="782" cy="163" r="6" fill="#3178C6"/>
     <text x="796" y="168" font-size="15" font-weight="500" fill="#ffffff">TypeScript <tspan fill="rgba(255,240,230,0.75)">58%</tspan></text><circle cx="951" cy="163" r="6" fill="#E34C26"/>
-    <text x="965" y="168" font-size="15" font-weight="500" fill="#ffffff">HTML <tspan fill="rgba(255,240,230,0.75)">18%</tspan></text><circle cx="782" cy="197" r="6" fill="#F05138"/>
+    <text x="965" y="168" font-size="15" font-weight="500" fill="#ffffff">HTML <tspan fill="rgba(255,240,230,0.75)">17%</tspan></text><circle cx="782" cy="197" r="6" fill="#F05138"/>
     <text x="796" y="202" font-size="15" font-weight="500" fill="#ffffff">Swift <tspan fill="rgba(255,240,230,0.75)">11%</tspan></text><circle cx="951" cy="197" r="6" fill="#663399"/>
     <text x="965" y="202" font-size="15" font-weight="500" fill="#ffffff">CSS <tspan fill="rgba(255,240,230,0.75)">7%</tspan></text></g>
 </svg>

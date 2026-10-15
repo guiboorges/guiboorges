@@ -103,7 +103,7 @@
   </g>
   <rect x="394.75" y="44.75" width="75.5" height="31.5" rx="16.5" fill="none" stroke="url(#p2r)" stroke-width="1.5"/>
     
-    <text x="407.5" y="65.9" font-size="15" font-weight="600" textLength="50" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.0.0</text>
+    <text x="407.5" y="65.9" font-size="15" font-weight="600" textLength="50" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.1.0</text>
   <defs>
     <clipPath id="p1c"><rect x="479" y="44" width="77" height="33" rx="16.5"/></clipPath>
     <linearGradient id="p1s" x1="0" y1="0" x2="0" y2="1">
@@ -128,10 +128,10 @@
   </g>
   <rect x="479.75" y="44.75" width="75.5" height="31.5" rx="16.5" fill="none" stroke="url(#p1r)" stroke-width="1.5"/>
     
-    <text x="492.5" y="65.9" font-size="15" font-weight="600" textLength="50" lengthAdjust="spacingAndGlyphs" fill="#ffffff">Site ↗</text>
+    <text x="492.5" y="65.9" font-size="15" font-weight="600" textLength="50" lengthAdjust="spacingAndGlyphs" fill="#ffffff">Demo ↗</text>
     <text x="46" y="140" font-size="36" font-weight="700" letter-spacing="-1" fill="#ffffff">Summit Home</text>
-    <text x="47" y="176" font-size="17" font-weight="500" fill="#ffffff">A working smart home dashboard built with the Summit</text>
-    <text x="47" y="202" font-size="16" font-weight="500" fill="rgba(255,255,255,0.9)">design system, running on a simulated lake house.</text>
+    <text x="47" y="176" font-size="17" font-weight="500" fill="#ffffff">Smart home dashboard running on a simulated lake house</text>
+    <text x="47" y="202" font-size="16" font-weight="500" fill="rgba(255,255,255,0.9)">Built on Summit, my design system made in Figma</text>
     
   <defs>
     <clipPath id="p3c"><rect x="44" y="238" width="64.2" height="30.800000000000004" rx="15.400000000000002"/></clipPath>
@@ -184,7 +184,7 @@
     
     <text x="128.8" y="258.44" font-size="14" font-weight="600" textLength="77" lengthAdjust="spacingAndGlyphs" fill="#ffffff">TypeScript</text>
   <defs>
-    <clipPath id="p5c"><rect x="226.4" y="238" width="56.2" height="30.800000000000004" rx="15.400000000000002"/></clipPath>
+    <clipPath id="p5c"><rect x="226.4" y="238" width="64.2" height="30.800000000000004" rx="15.400000000000002"/></clipPath>
     <linearGradient id="p5s" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#fff" stop-opacity="0.4"/>
       <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
@@ -199,14 +199,14 @@
       <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.2"/>
     </filter>
   </defs>
-  <rect x="226.4" y="238" width="56.2" height="30.800000000000004" rx="15.400000000000002" fill="#000" filter="url(#p5d)" opacity=".5"/>
+  <rect x="226.4" y="238" width="64.2" height="30.800000000000004" rx="15.400000000000002" fill="#000" filter="url(#p5d)" opacity=".5"/>
   <g clip-path="url(#p5c)">
-    <g transform="translate(254.5 253.4) scale(1.3) translate(-254.5 -253.4)"><use href="#wall" filter="url(#refract)"/></g>
-    <rect x="226.4" y="238" width="56.2" height="30.800000000000004" fill="rgba(120,36,4,0.26)"/>
-    <rect x="226.4" y="238" width="56.2" height="30.800000000000004" fill="url(#p5s)"/>
+    <g transform="translate(258.5 253.4) scale(1.3) translate(-258.5 -253.4)"><use href="#wall" filter="url(#refract)"/></g>
+    <rect x="226.4" y="238" width="64.2" height="30.800000000000004" fill="rgba(120,36,4,0.26)"/>
+    <rect x="226.4" y="238" width="64.2" height="30.800000000000004" fill="url(#p5s)"/>
   </g>
-  <rect x="227.15" y="238.75" width="54.7" height="29.300000000000004" rx="15.400000000000002" fill="none" stroke="url(#p5r)" stroke-width="1.5"/>
+  <rect x="227.15" y="238.75" width="62.7" height="29.300000000000004" rx="15.400000000000002" fill="none" stroke="url(#p5r)" stroke-width="1.5"/>
     
-    <text x="239" y="258.44" font-size="14" font-weight="600" textLength="31" lengthAdjust="spacingAndGlyphs" fill="#ffffff">Vite</text>
-    <text x="554" y="262" text-anchor="end" font-size="14" font-weight="500" fill="rgba(255,255,255,0.9)"></text></g>
+    <text x="239" y="258.44" font-size="14" font-weight="600" textLength="39" lengthAdjust="spacingAndGlyphs" fill="#ffffff">Figma</text>
+    <text x="554" y="262" text-anchor="end" font-size="14" font-weight="500" fill="rgba(255,255,255,0.9)">4 views · 14 components</text></g>
 </svg>

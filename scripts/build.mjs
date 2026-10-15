@@ -352,6 +352,12 @@ const CURATED = [
     tags: ['React', 'three.js', 'Vite'], metric: 'unofficial concept', link: 'Site',
   },
   {
+    repo: 'summit-home', area: 'sites', title: 'Summit Home',
+    desc: 'Smart home dashboard running on a simulated lake house',
+    detail: 'Built on Summit, my design system made in Figma',
+    tags: ['React', 'TypeScript', 'Figma'], metric: '4 views · 14 components', link: 'Demo',
+  },
+  {
     repo: 'borg-business-os', area: 'ia', title: 'BORG Business OS',
     desc: 'Business dashboard with 6 AI agents and long memory',
     detail: 'Built for solo founders: pipeline, goals, roadmap',
@@ -362,6 +368,12 @@ const CURATED = [
     desc: 'Tutorial: long-term memory for Claude, per project',
     detail: 'One vault per project, MCP and Claude Code hooks',
     tags: ['Claude Code', 'Obsidian', 'MCP'], metric: 'tutorial · template', link: 'Guide',
+  },
+  {
+    repo: 'design-studio', area: 'ia', title: 'Design Studio',
+    desc: 'A design team of AI agents for Claude Code and Codex',
+    detail: 'Creative director, specialists, cited knowledge base',
+    tags: ['Claude Code', 'Codex', 'Figma'], metric: '9 specialists · 8 skills', link: 'Repo',
   },
   {
     repo: 'kit-editar', area: 'motion', title: 'Kit EDITAR',
