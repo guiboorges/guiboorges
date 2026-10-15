@@ -82,8 +82,8 @@
     
     <text x="975.6" y="65.36" font-size="16" font-weight="600" textLength="114" lengthAdjust="spacingAndGlyphs" fill="#ffffff">Updated daily</text>
       <g transform="translate(94 136) scale(1.0833333333333333)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 3l0 6"/><path d="M12 15l0 6"/></g>
-      <text x="136" y="146" font-size="19" font-weight="700" fill="#ffffff">Design Studio</text>
-      <text x="136" y="169" font-size="15" font-weight="500" fill="rgba(255,240,230,0.75)">Add the Clearbook design system to the library</text>
+      <text x="136" y="146" font-size="19" font-weight="700" fill="#ffffff">Ember Commerce</text>
+      <text x="136" y="169" font-size="15" font-weight="500" fill="rgba(255,240,230,0.75)">Fit wallet amounts and say monthly limits</text>
       
   <defs>
     <clipPath id="p2c"><rect x="980.6" y="128" width="66.4" height="28.6" rx="14.3"/></clipPath>
@@ -109,11 +109,11 @@
   </g>
   <rect x="981.35" y="128.75" width="64.9" height="27.1" rx="14.3" fill="none" stroke="url(#p2r)" stroke-width="1.5"/>
     
-    <text x="992.3000000000001" y="146.98000000000002" font-size="13" font-weight="600" textLength="43" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.0.2</text>
+    <text x="992.3000000000001" y="146.98000000000002" font-size="13" font-weight="600" textLength="43" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.0.0</text>
       <text x="1104" y="153" text-anchor="end" font-size="15" font-weight="500" fill="rgba(255,240,230,0.75)">today</text><line x1="96" x2="1104" y1="182" y2="182" stroke="rgba(255,232,214,0.10)"/>
       <g transform="translate(94 202) scale(1.0833333333333333)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 3l0 6"/><path d="M12 15l0 6"/></g>
-      <text x="136" y="212" font-size="19" font-weight="700" fill="#ffffff">Clearbook</text>
-      <text x="136" y="235" font-size="15" font-weight="500" fill="rgba(255,240,230,0.75)">Clearbook: accounting dashboard on a simulated design studio</text>
+      <text x="136" y="212" font-size="19" font-weight="700" fill="#ffffff">Design Studio</text>
+      <text x="136" y="235" font-size="15" font-weight="500" fill="rgba(255,240,230,0.75)">Add the Ember design system to the library</text>
       
   <defs>
     <clipPath id="p3c"><rect x="980.6" y="194" width="66.4" height="28.6" rx="14.3"/></clipPath>
@@ -139,11 +139,11 @@
   </g>
   <rect x="981.35" y="194.75" width="64.9" height="27.1" rx="14.3" fill="none" stroke="url(#p3r)" stroke-width="1.5"/>
     
-    <text x="992.3000000000001" y="212.98000000000002" font-size="13" font-weight="600" textLength="43" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.0.0</text>
+    <text x="992.3000000000001" y="212.98000000000002" font-size="13" font-weight="600" textLength="43" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.0.3</text>
       <text x="1104" y="219" text-anchor="end" font-size="15" font-weight="500" fill="rgba(255,240,230,0.75)">today</text><line x1="96" x2="1104" y1="248" y2="248" stroke="rgba(255,232,214,0.10)"/>
       <g transform="translate(94 268) scale(1.0833333333333333)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 3l0 6"/><path d="M12 15l0 6"/></g>
-      <text x="136" y="278" font-size="19" font-weight="700" fill="#ffffff">Summit Home</text>
-      <text x="136" y="301" font-size="15" font-weight="500" fill="rgba(255,240,230,0.75)">Describe the simulation and view files in the README</text>
+      <text x="136" y="278" font-size="19" font-weight="700" fill="#ffffff">Clearbook</text>
+      <text x="136" y="301" font-size="15" font-weight="500" fill="rgba(255,240,230,0.75)">Clearbook: accounting dashboard on a simulated design studio</text>
       
   <defs>
     <clipPath id="p4c"><rect x="980.6" y="260" width="66.4" height="28.6" rx="14.3"/></clipPath>
@@ -169,6 +169,6 @@
   </g>
   <rect x="981.35" y="260.75" width="64.9" height="27.1" rx="14.3" fill="none" stroke="url(#p4r)" stroke-width="1.5"/>
     
-    <text x="992.3000000000001" y="278.98" font-size="13" font-weight="600" textLength="43" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.1.0</text>
+    <text x="992.3000000000001" y="278.98" font-size="13" font-weight="600" textLength="43" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.0.0</text>
       <text x="1104" y="285" text-anchor="end" font-size="15" font-weight="500" fill="rgba(255,240,230,0.75)">today</text></g>
 </svg>
