@@ -11,13 +11,13 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=b94db5da">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=de6d3265" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=833e9f93">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=be5f3504" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=4beaebbb">
-  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=d8ac1e6f" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=243504ea">
+  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=e6289851" width="100%">
 </picture>
 
 <!-- projects:start -->
@@ -36,7 +36,7 @@
 <a href="https://github.com/guiboorges/lustro"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-lustro-dark.svg?v=0f7bc7f8"><img alt="Lustro: Open-source Mac cleaner that shows what it removes" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-lustro-light.svg?v=b0507dab" width="49%"></picture></a>
 
 <a href="https://github.com/guiboorges/clearbook"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-clearbook-dark.svg?v=9f8d2fb8"><img alt="Clearbook: A working accounting dashboard built with the" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-clearbook-light.svg?v=f313a4e2" width="49%"></picture></a>
-<a href="https://github.com/guiboorges/ember-commerce"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-ember-commerce-dark.svg?v=21c91966"><img alt="Ember Commerce: A working business dashboard for an online store," src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-ember-commerce-light.svg?v=ccb191f8" width="49%"></picture></a>
+<a href="https://github.com/guiboorges/ember-commerce"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-ember-commerce-dark.svg?v=4aea9615"><img alt="Ember Commerce: A working business dashboard for an online store," src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-ember-commerce-light.svg?v=3158e029" width="49%"></picture></a>
 <!-- projects:end -->
 
 <a href="https://www.linkedin.com/in/guilherme-borges-113a2a168/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-dark.svg?v=f17af1f1"><img alt="LinkedIn" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-light.svg?v=96f9d3e7" height="56"></picture></a>
