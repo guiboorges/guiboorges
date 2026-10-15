@@ -11,13 +11,13 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=1a3dbe64">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=9d5346b6" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=37c53ecf">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=24483675" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=f87bc574">
-  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=3b51af55" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=2695d3b3">
+  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=8b088c88" width="100%">
 </picture>
 
 <!-- projects:start -->
@@ -30,6 +30,8 @@
 <a href="https://github.com/guiboorges/borg-business-os"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-borg-business-os-dark.svg?v=b9a42c7b"><img alt="BORG Business OS: Business dashboard with 6 AI agents and long memory" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-borg-business-os-light.svg?v=75c2bcdd" width="49%"></picture></a>
 
 <a href="https://github.com/guiboorges/memoria-ia-obsidian"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-memoria-ia-obsidian-dark.svg?v=3cddb870"><img alt="AI Memory with Obsidian: Tutorial: long-term memory for Claude, per project" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-memoria-ia-obsidian-light.svg?v=a522aaa4" width="49%"></picture></a>
+<a href="https://github.com/guiboorges/design-studio"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-design-studio-dark.svg?v=d396e7b3"><img alt="Design Studio: A design team for Claude Code and Codex: a creative" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-design-studio-light.svg?v=6d8fa4d6" width="49%"></picture></a>
+
 <a href="https://github.com/guiboorges/lustro"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-lustro-dark.svg?v=0f7bc7f8"><img alt="Lustro: Open-source Mac cleaner that shows what it removes" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-lustro-light.svg?v=b0507dab" width="49%"></picture></a>
 <!-- projects:end -->
 

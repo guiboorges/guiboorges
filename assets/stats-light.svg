@@ -55,7 +55,7 @@
   <rect x="60.75" y="40.75" width="208.5" height="198.5" rx="34" fill="none" stroke="url(#p2r)" stroke-width="1.5"/>
     <circle cx="94" cy="78" r="10" fill="#30D158"/>
     <text x="114" y="84" font-size="17" font-weight="600" fill="#ffffff">Commits</text>
-    <text x="84" y="172" font-size="60" font-weight="700" letter-spacing="-2" fill="#ffffff">75</text>
+    <text x="84" y="172" font-size="60" font-weight="700" letter-spacing="-2" fill="#ffffff">77</text>
     <text x="86" y="208" font-size="14" font-weight="500" fill="rgba(255,255,255,0.9)">this year</text>
   <defs>
     <clipPath id="p3c"><rect x="290" y="40" width="210" height="200" rx="34"/></clipPath>
@@ -82,7 +82,7 @@
   <rect x="290.75" y="40.75" width="208.5" height="198.5" rx="34" fill="none" stroke="url(#p3r)" stroke-width="1.5"/>
     <circle cx="324" cy="78" r="10" fill="#0A84FF"/>
     <text x="344" y="84" font-size="17" font-weight="600" fill="#ffffff">Repos</text>
-    <text x="314" y="172" font-size="60" font-weight="700" letter-spacing="-2" fill="#ffffff">7</text>
+    <text x="314" y="172" font-size="60" font-weight="700" letter-spacing="-2" fill="#ffffff">8</text>
     <text x="316" y="208" font-size="14" font-weight="500" fill="rgba(255,255,255,0.9)">public repos</text>
   <defs>
     <clipPath id="p4c"><rect x="520" y="40" width="210" height="200" rx="34"/></clipPath>
