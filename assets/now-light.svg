@@ -140,7 +140,7 @@
   <rect x="939.35" y="194.75" width="64.9" height="27.1" rx="14.3" fill="none" stroke="url(#p3r)" stroke-width="1.5"/>
     
     <text x="950.3000000000001" y="212.98000000000002" font-size="13" font-weight="600" textLength="43" lengthAdjust="spacingAndGlyphs" fill="#ffffff">v1.0.3</text>
-      <text x="1104" y="219" text-anchor="end" font-size="15" font-weight="500" fill="rgba(255,255,255,0.9)">3 days ago</text><line x1="96" x2="1104" y1="248" y2="248" stroke="rgba(255,255,255,0.16)"/>
+      <text x="1104" y="219" text-anchor="end" font-size="15" font-weight="500" fill="rgba(255,255,255,0.9)">4 days ago</text><line x1="96" x2="1104" y1="248" y2="248" stroke="rgba(255,255,255,0.16)"/>
       <g transform="translate(94 268) scale(1.0833333333333333)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 3l0 6"/><path d="M12 15l0 6"/></g>
       <text x="136" y="278" font-size="19" font-weight="700" fill="#ffffff">Clearbook</text>
       <text x="136" y="301" font-size="15" font-weight="500" fill="rgba(255,255,255,0.9)">Clearbook: accounting dashboard on a simulated design studio</text>
