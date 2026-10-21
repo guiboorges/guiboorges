@@ -57,7 +57,7 @@ function header(t) {
   <text x="${cx - pw / 2 + 38}" y="91" font-size="15" font-weight="500" fill="${t.text}">${pill}</text>
   <text x="${cx}" y="198" text-anchor="middle" font-size="76" font-weight="700" letter-spacing="-2.5" fill="${t.text}">Guilherme Borges</text>
   <text x="${cx}" y="254" text-anchor="middle" font-size="36" font-weight="600" letter-spacing="-0.8" fill="url(#role)">AI Automation Developer</text>
-  <text x="${cx}" y="304" text-anchor="middle" font-size="18" font-weight="500" fill="${t.sub}">AI agents · Automation · Full-stack web · Design</text>`, { glow: true });
+  <text x="${cx}" y="304" text-anchor="middle" font-size="18" font-weight="500" fill="${t.sub}">AI agents · Automation · Full-stack · Design</text>`, { glow: true });
 }
 
 // ---------- stack: app-style icon tiles ----------
@@ -206,6 +206,18 @@ const CURATED = [
     desc: 'Smart home dashboard running on a simulated lake house',
     detail: 'Built on Summit, my design system made in Figma',
     tags: ['React', 'TypeScript', 'Figma'], metric: '4 views · 14 components', link: 'Demo',
+  },
+  {
+    repo: 'clearbook', area: 'sites', title: 'Clearbook',
+    desc: 'Accounting dashboard running on a simulated studio',
+    detail: 'Built on Clearbook, my glass design system in Figma',
+    tags: ['React', 'TypeScript', 'Figma'], metric: '20 components · 43 icons', link: 'Demo',
+  },
+  {
+    repo: 'ember-commerce', area: 'sites', title: 'Ember Commerce',
+    desc: 'Store dashboard running on a simulated ceramics shop',
+    detail: 'Built on Ember, my design system made in Figma',
+    tags: ['React', 'TypeScript', 'Figma'], metric: '6 areas · 23 pages', link: 'Demo',
   },
   {
     repo: 'borg-business-os', area: 'ia', title: 'BORG Business OS',

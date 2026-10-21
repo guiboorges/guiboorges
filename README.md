@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/header-dark.svg?v=bf14ddc3">
-  <img alt="Guilherme Borges — AI Automation Developer" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/header-light.svg?v=5a1010f5" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/header-dark.svg?v=a3e37ca8">
+  <img alt="Guilherme Borges — AI Automation Developer" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/header-light.svg?v=27e3e1f7" width="100%">
 </picture>
 
 <picture>
@@ -27,6 +27,9 @@
 <a href="https://github.com/guiboorges/inn-aroma"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-inn-aroma-dark.svg?v=445ec437"><img alt="INN AROMA · Concept: Website concept for a scent brand, with a 3D diffuser" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-inn-aroma-light.svg?v=cb7b2988" width="49%"></picture></a>
 
 <a href="https://github.com/guiboorges/summit-home"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-summit-home-dark.svg?v=0b5c5e59"><img alt="Summit Home: Smart home dashboard running on a simulated lake house" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-summit-home-light.svg?v=499be475" width="49%"></picture></a>
+<a href="https://github.com/guiboorges/clearbook"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-clearbook-dark.svg?v=1b20c9ff"><img alt="Clearbook: Accounting dashboard running on a simulated studio" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-clearbook-light.svg?v=c660458f" width="49%"></picture></a>
+
+<a href="https://github.com/guiboorges/ember-commerce"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-ember-commerce-dark.svg?v=c5b131e3"><img alt="Ember Commerce: Store dashboard running on a simulated ceramics shop" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-ember-commerce-light.svg?v=b6d1946e" width="49%"></picture></a>
 <a href="https://github.com/guiboorges/kit-editar"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-kit-editar-dark.svg?v=daedb33f"><img alt="Kit EDITAR: Prompt kit to edit reels with motion and karaoke captions" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-kit-editar-light.svg?v=c1d40dad" width="49%"></picture></a>
 
 <a href="https://github.com/guiboorges/borg-business-os"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-borg-business-os-dark.svg?v=5e4c1aaf"><img alt="BORG Business OS: Business dashboard with 6 AI agents and long memory" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-borg-business-os-light.svg?v=8ba694d5" width="49%"></picture></a>
@@ -34,9 +37,6 @@
 
 <a href="https://github.com/guiboorges/design-studio"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-design-studio-dark.svg?v=b6b01d07"><img alt="Design Studio: A design team of AI agents for Claude Code and Codex" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-design-studio-light.svg?v=60d8d35b" width="49%"></picture></a>
 <a href="https://github.com/guiboorges/lustro"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-lustro-dark.svg?v=2007f108"><img alt="Lustro: Open-source Mac cleaner that shows what it removes" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-lustro-light.svg?v=52376a18" width="49%"></picture></a>
-
-<a href="https://github.com/guiboorges/clearbook"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-clearbook-dark.svg?v=256bfc73"><img alt="Clearbook: A working accounting dashboard built with the" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-clearbook-light.svg?v=615a512d" width="49%"></picture></a>
-<a href="https://github.com/guiboorges/ember-commerce"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-ember-commerce-dark.svg?v=d885b1a0"><img alt="Ember Commerce: A working business dashboard for an online store," src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-ember-commerce-light.svg?v=504f19ef" width="49%"></picture></a>
 <!-- projects:end -->
 
 <a href="https://www.linkedin.com/in/guilherme-borges-113a2a168/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-dark.svg?v=044f546f"><img alt="LinkedIn" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-light.svg?v=cf0643db" height="48"></picture></a>
