@@ -20,6 +20,11 @@
   <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=0d4885ad" width="100%">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/output/snake-dark.svg">
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/guiboorges/guiboorges/output/snake-light.svg" width="100%">
+</picture>
+
 <!-- projects:start -->
 <a href="https://github.com/guiboorges?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/projects-dark.svg?v=e29ef43f"><img alt="Projects" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/projects-light.svg?v=670237f0" width="100%"></picture></a>
 
@@ -41,10 +46,5 @@
 
 <a href="https://www.linkedin.com/in/guilherme-borges-113a2a168/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-dark.svg?v=044f546f"><img alt="LinkedIn" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-light.svg?v=cf0643db" height="48"></picture></a>
 <a href="https://www.instagram.com/guiboorges_/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-instagram-dark.svg?v=fb5d0e81"><img alt="Instagram" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-instagram-light.svg?v=9eb8b4db" height="48"></picture></a>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/output/snake-dark.svg">
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/guiboorges/guiboorges/output/snake-light.svg" width="100%">
-</picture>
 
 </div>
