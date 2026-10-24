@@ -16,8 +16,8 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=f9d15aac">
-  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=6131f967" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=8fad7493">
+  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=d26c54b9" width="100%">
 </picture>
 
 <picture>
