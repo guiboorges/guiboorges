@@ -9,7 +9,7 @@
   <g transform="translate(56 132) scale(1)" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 3l0 6"/><path d="M12 15l0 6"/></g>
   <text x="96" y="142" font-size="19" font-weight="600" fill="#f5f5f7">Design Studio</text>
   <text x="96" y="166" font-size="15" font-weight="500" fill="#a1a1a6">Add the ai-slop skill so designs don't read as AI-generated</text>
-  <text x="1144" y="149" text-anchor="end" font-size="15" font-weight="500" fill="#86868b">v1.0.5 · today</text><line x1="56" x2="1144" y1="182" y2="182" stroke="rgba(255,255,255,0.09)"/>
+  <text x="1144" y="149" text-anchor="end" font-size="15" font-weight="500" fill="#86868b">v1.0.5 · yesterday</text><line x1="56" x2="1144" y1="182" y2="182" stroke="rgba(255,255,255,0.09)"/>
   <g transform="translate(56 206) scale(1)" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 3l0 6"/><path d="M12 15l0 6"/></g>
   <text x="96" y="216" font-size="19" font-weight="600" fill="#f5f5f7">Ember Commerce</text>
   <text x="96" y="240" font-size="15" font-weight="500" fill="#a1a1a6">Add the bottom tab bar for phones</text>
