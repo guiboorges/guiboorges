@@ -10,5 +10,5 @@
   <text x="41" y="192" font-size="16" font-weight="500" fill="#a1a1a6">Creative director, specialists, cited knowledge base</text>
   <line x1="40" x2="560" y1="222" y2="222" stroke="rgba(255,255,255,0.09)"/>
   <text x="41" y="256" font-size="14" font-weight="500" fill="#a1a1a6">Claude Code · Codex · Figma</text>
-  <text x="560" y="256" text-anchor="end" font-size="14" font-weight="500" fill="#86868b">v1.0.5 · 9 specialists · 8 skills</text>
+  <text x="560" y="256" text-anchor="end" font-size="14" font-weight="500" fill="#86868b">v1.0.6 · 9 specialists · 8 skills</text>
 </svg>
