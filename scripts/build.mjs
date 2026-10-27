@@ -184,7 +184,7 @@ const AREAS = {
   ensino: { icon: 'school', label: 'Education' },
   sites: { icon: 'world-www', label: 'Web' },
   motion: { icon: 'movie', label: 'Motion & Video' },
-  ia: { icon: 'sparkles', label: 'AI' },
+  ia: { icon: 'brain', label: 'AI' },
   apps: { icon: 'device-laptop', label: 'Mac apps' },
   code: { icon: 'code', label: 'Code' },
 };
