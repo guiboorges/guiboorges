@@ -13,7 +13,7 @@
   <g transform="translate(56 206) scale(1)" fill="none" stroke="#B7410E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 3l0 6"/><path d="M12 15l0 6"/></g>
   <text x="96" y="216" font-size="19" font-weight="600" fill="#1d1d1f">Ember Commerce</text>
   <text x="96" y="240" font-size="15" font-weight="500" fill="#6e6e73">Add the bottom tab bar for phones</text>
-  <text x="1144" y="223" text-anchor="end" font-size="15" font-weight="500" fill="#86868b">v1.1.0 · 13 days ago</text><line x1="56" x2="1144" y1="256" y2="256" stroke="rgba(0,0,0,0.08)"/>
+  <text x="1144" y="223" text-anchor="end" font-size="15" font-weight="500" fill="#86868b">v1.1.0 · 2 weeks ago</text><line x1="56" x2="1144" y1="256" y2="256" stroke="rgba(0,0,0,0.08)"/>
   <g transform="translate(56 280) scale(1)" fill="none" stroke="#B7410E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 3l0 6"/><path d="M12 15l0 6"/></g>
   <text x="96" y="290" font-size="19" font-weight="600" fill="#1d1d1f">Clearbook</text>
   <text x="96" y="314" font-size="15" font-weight="500" fill="#6e6e73">Clearbook: accounting dashboard on a simulated design studio</text>
