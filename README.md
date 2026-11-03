@@ -11,13 +11,13 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=62085ee6">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=03538830" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=f0e2b6d1">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=a9231211" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=84ec7d9d">
-  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=085035d8" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=e284281a">
+  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=b3024752" width="100%">
 </picture>
 
 <picture>
