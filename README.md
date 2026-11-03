@@ -11,13 +11,13 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=f0e2b6d1">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=a9231211" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-dark.svg?v=cd938ee9">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/stats-light.svg?v=3d6fbd99" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=bccae484">
-  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=4456e54e" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-dark.svg?v=e10684b8">
+  <img alt="Now building: latest commits across my repositories" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/now-light.svg?v=cf07c401" width="100%">
 </picture>
 
 <picture>
@@ -42,6 +42,8 @@
 
 <a href="https://github.com/guiboorges/design-studio"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-design-studio-dark.svg?v=f533d06f"><img alt="Design Studio: A design team of AI agents for Claude Code and Codex" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-design-studio-light.svg?v=b95a8d47" width="49%"></picture></a>
 <a href="https://github.com/guiboorges/lustro"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-lustro-dark.svg?v=2007f108"><img alt="Lustro: Open-source Mac cleaner that shows what it removes" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-lustro-light.svg?v=52376a18" width="49%"></picture></a>
+
+<a href="https://github.com/guiboorges/auditoria-seguranca-local"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-auditoria-seguranca-local-dark.svg?v=205920e8"><img alt="Auditoria Seguranca Local: Skill/plugin para agentes de IA (Claude Code e" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/project-auditoria-seguranca-local-light.svg?v=49dfe25e" width="49%"></picture></a>
 <!-- projects:end -->
 
 <a href="https://www.linkedin.com/in/guilherme-borges-113a2a168/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-dark.svg?v=044f546f"><img alt="LinkedIn" src="https://raw.githubusercontent.com/guiboorges/guiboorges/main/assets/btn-linkedin-light.svg?v=cf0643db" height="48"></picture></a>

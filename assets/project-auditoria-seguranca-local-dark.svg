@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="290" viewBox="0 0 600 290" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <rect x=".5" y=".5" width="599" height="289" rx="28" fill="#161b22" stroke="rgba(255,255,255,0.09)"/>
+  
+  <g transform="translate(40 38) scale(0.8333333333333334)" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8l-4 4l4 4"/><path d="M17 8l4 4l-4 4"/><path d="M14 4l-4 16"/></g>
+  <text x="68" y="54" font-size="15" font-weight="600" fill="#FF8A3D">Code</text>
+  <text x="560" y="54" text-anchor="end" font-size="15" font-weight="600" fill="#FF8A3D">Repo ↗</text>
+  <text x="40" y="128" font-size="30" font-weight="700" letter-spacing="-1" fill="#f5f5f7">Auditoria Seguranca Local</text>
+  <text x="41" y="166" font-size="17" font-weight="500" fill="#f5f5f7">Skill/plugin para agentes de IA (Claude Code e</text>
+  <text x="41" y="192" font-size="16" font-weight="500" fill="#a1a1a6">outros) auditarem a segurança do próprio PC e da re…</text>
+  <line x1="40" x2="560" y1="222" y2="222" stroke="rgba(255,255,255,0.09)"/>
+  <text x="41" y="256" font-size="14" font-weight="500" fill="#a1a1a6">Claude Code · Python</text>
+  <text x="560" y="256" text-anchor="end" font-size="14" font-weight="500" fill="#86868b"></text>
+</svg>
